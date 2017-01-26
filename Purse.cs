@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_game
 {
-    class Program
+    public class purse
     {
-        static void Main(string[] args)
+       public decimal purseBalance = 20.00M;
+       
+        public void showPurseBalance()
         {
-            Game game = new Game();
-            game.StartGame();
+            Console.WriteLine(purseBalance);
         }
     }
 }
+

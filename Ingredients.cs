@@ -6,25 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_game
 {
-    public class Player
-
+    class Ingredients
     {
-
         public Inventory inventory;
 
-        public purse purse;
-
-      
 
 
-
-        public Player()
-
+        public void GetIngredients()
         {
-            this.inventory = new Inventory();
-            this.purse = new purse();
-        }
 
-       
+        }
     }
 }
