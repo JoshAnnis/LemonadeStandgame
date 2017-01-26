@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 namespace Lemonade_Stand_game
 {
     class Day
-    {
+       {
+        Player player;
+        public void GetDay()
+        {
 
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_game
 {
-    class Game
+    public class Game
     {
         Inventory inventory = new Inventory();
         Player player = new Player();
@@ -23,12 +23,13 @@ namespace Lemonade_Stand_game
         {
 
             
-            Console.WriteLine("Welcome to Lemonade Stand\nDo you have what it takes to start you lemonade stand empire?");
-            Console.WriteLine("If you think you have what it takes then you have to prove it cupcake but let me tell you it's not going to be easy");
-            Console.WriteLine("but since you seem so sure that you wont fail then by all means prove yourself");
-            Console.WriteLine("But fist you have to get ingredients so head on over to the store and pick some up.");
+            Console.WriteLine("Welcome to Lemonade Stand\nDo you have what it takes to start you lemonade stand empire?\n");
+            Console.WriteLine("If you think you have what it takes then you have to prove it cupcake but let me tell you it's not going to be easy\n");
+            Console.WriteLine("but since you seem so sure that you wont fail then by all means prove yourself\n");
+            Console.WriteLine("But fist you have to get ingredients so head on over to the store and pick some up.\n");
+            Console.WriteLine("=================\n");
             inventory.inventoryReport();
-            RestockOpition(this.store);
+            RestockOpition(store);
             
             Console.ReadLine();
           }
@@ -59,7 +60,9 @@ namespace Lemonade_Stand_game
 
         }
 
-  
+        
+
+        
 
     }
 }

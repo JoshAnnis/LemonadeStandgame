@@ -9,5 +9,35 @@ namespace Lemonade_Stand_game
     class Customer
     {
 
+       Random mood;
+
+
+
+        public Customer ()
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

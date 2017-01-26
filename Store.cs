@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_game
 {
-
+    
     public class Store
     {
         
         public decimal singleIceCube = .0075M, singleLemon = .075M, singleCupOfSugar = .075M, singlePaperCup = .0075M;
 
-        public decimal ice100Unit = .75M, ice750Unit = 1.75M, ice300Unit = 2.75M;
+        public decimal ice100Unit = 1.00M, ice250Unit = 2.25M, ice300Unit = 3.50M;
 
         public decimal lemons10Units = .75M, lemons25Units = 1.75M, lemons75Units = 2.75M;
 
-        public decimal cups100Unit = .75M, cups250Unit = 1.75M, cups300Unit = 3.50M;
+        public decimal cups100Unit = 1.75M, cups250Unit = 2.25M, cups300Unit = 3.50M;
 
         public decimal sugar10Unit = .75M, sugar30Unit = 2.00M, sugar75Unit = 6.50M;
         
@@ -28,8 +28,7 @@ namespace Lemonade_Stand_game
         public void showStoreMenu(Player player)
         {
             Console.WriteLine("Welcome to the store here you can buy all the ingredients that you will need");
-            Console.WriteLine("You can buy things in bulk or not its up tp you how you want to buy things.");
-            Console.WriteLine("What would you like to over purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice\n\n");
+            Console.WriteLine("What would you like to over purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice\nor exit");
 
             Console.Write("Please enter one of the store choices");
 
@@ -66,6 +65,25 @@ namespace Lemonade_Stand_game
                 buyMoreIce(player);
 
             }
+            else 
+            {
+                Console.WriteLine("Are you sure your ready to leave the store? \n\n\t[Y] or [N]\n");
+                string Leave = Console.ReadLine();
+                if (Leave == "Y")
+                {
+
+
+                    this.LeaveStore;
+                        {
+
+                    }
+                    
+                }
+
+
+
+
+            }
 
         }
         public void buyMoreCups(Player player)
@@ -78,7 +96,7 @@ namespace Lemonade_Stand_game
 
             Console.WriteLine("You have $" + (player.purse.purseBalance) + " in your cashbox.\n\n");
 
-            Console.WriteLine("Select a quantity for your order.\n\n[1]\t100 Cups\n[2]\t300 Cups\n[3]\t750 Cups\n\n");
+            Console.WriteLine("Select a quantity for your order.\n\n[1]\t100  Cups for $1.75\n[2]\t250  Cups for $2.25\n[3]\t300 Cups for $3.50\n\n");
 
             Console.Write("Your choice ");
 
@@ -150,7 +168,7 @@ namespace Lemonade_Stand_game
 
 
 
-            Console.WriteLine("\nSelect a quantity for your order.\n\n [1] \t10 Lemons \n [2] \t25 Lemons \n [3] \t75 Lemons\n");
+            Console.WriteLine("\nSelect a quantity for your order.\n\n [1] \t10 Lemons for $.75 \n [2] \t25 Lemons for $1.75 \n [3] \t75 Lemons for $2.75\n");
 
             Console.Write("Your choice ");
 
@@ -203,9 +221,9 @@ namespace Lemonade_Stand_game
                 player.purse.purseBalance -= lemons75Units;
 
             }
-
+            player.inventory.inventoryReport();
             Console.WriteLine("\n\nThis is your new cashbox balance $ " + (player.purse.purseBalance));
-
+            showStoreMenu(player);
 
 
         }
@@ -218,7 +236,7 @@ namespace Lemonade_Stand_game
 
 
 
-            Console.WriteLine("\nSelect a quantity for your order.\n\n[1]\t10 Cups\n[2]\t30 Cups\n[3]\t75 Cups");
+            Console.WriteLine("\nSelect a quantity for your order.\n\n[1]\t10 Cups for $.75\n[2]\t30 Cups for $2.00\n[3]\t75 Cups $6.50");
 
             string usersChoice = Console.ReadLine();
 
@@ -228,7 +246,7 @@ namespace Lemonade_Stand_game
 
             {
 
-                for (int i = 0; i < 100; i++)
+                for (int i = 0; i < 10; i++)
 
                 {
 
@@ -244,7 +262,7 @@ namespace Lemonade_Stand_game
 
             {
 
-                for (int i = 0; i < 300; i++)
+                for (int i = 0; i < 30; i++)
 
                 {
 
@@ -260,7 +278,7 @@ namespace Lemonade_Stand_game
 
             {
 
-                for (int i = 0; i < 750; i++)
+                for (int i = 0; i < 75; i++)
 
                 {
 
@@ -268,10 +286,10 @@ namespace Lemonade_Stand_game
 
                 }
 
-                player.purse.purseBalance -= ice750Unit;
+                player.purse.purseBalance -= ice250Unit;
 
             }
-
+            player.inventory.inventoryReport();
             Console.WriteLine("\n\nThis is your new balance " + (player.purse.purseBalance));
 
             showStoreMenu(player);
@@ -286,7 +304,7 @@ namespace Lemonade_Stand_game
 
 
 
-            Console.WriteLine("\nSelect a quantity for your order.\n\n[1]\t100 Cube\n[2]\t300 Cubes\n[3]\t750 Cubes");
+            Console.WriteLine("\nSelect a quantity for your order.\n\n[1]\t100 Cubes for $1.00\n[2]\t250 Cubes for $2.25\n[3]\t300 Cubes for $3.50");
 
             Console.Write("Your choice ");
 
@@ -312,7 +330,7 @@ namespace Lemonade_Stand_game
 
             {
 
-                for (int i = 0; i < 300; i++)
+                for (int i = 0; i < 250; i++)
 
                 {
 
@@ -328,7 +346,7 @@ namespace Lemonade_Stand_game
 
             {
 
-                for (int i = 0; i < 750; i++)
+                for (int i = 0; i < 300; i++)
 
                 {
 
@@ -339,11 +357,10 @@ namespace Lemonade_Stand_game
                 }
 
             }
-
-            Console.WriteLine("\n\nYou now have this many ice units : " + (player.inventory.iceList.Count) + "\n\nThis is your new balance " + (player.purse.purseBalance));
-
-            showStoreMenu(player);
-
-        }
+            player.inventory.inventoryReport();
+            Console.WriteLine("\n\nThis is your new balance " + (player.purse.purseBalance));
+            showStoreMenu(player);                       
+        }       
+       
     }
     }

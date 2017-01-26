@@ -8,6 +8,6 @@ namespace Lemonade_Stand_game
 {
     class Weather
     {
-        Random random = new Random();
+
     }
 }
