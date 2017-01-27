@@ -11,26 +11,19 @@ namespace Lemonade_Stand_game
         Inventory inventory = new Inventory();
         Player player = new Player();
         Store store = new Store();
-        Store showStoreMenu;
         int dayNumber = 1;
         Day day = new Day();
-
-        
-
+        Weather weather = new Weather();
+        UserInterface ui = new UserInterface();
+       
 
 
         public void StartGame()
         {
-
-            
-            Console.WriteLine("Welcome to Lemonade Stand\nDo you have what it takes to start you lemonade stand empire?\n");
-            Console.WriteLine("If you think you have what it takes then you have to prove it cupcake but let me tell you it's not going to be easy\n");
-            Console.WriteLine("but since you seem so sure that you wont fail then by all means prove yourself\n");
-            Console.WriteLine("But fist you have to get ingredients so head on over to the store and pick some up.\n");
-            Console.WriteLine("=================\n");
+            ui.title();
+            weather.StartingWeather();
             inventory.inventoryReport();
             RestockOpition(store);
-            
             Console.ReadLine();
           }
 
@@ -60,7 +53,11 @@ namespace Lemonade_Stand_game
 
         }
 
-        
+        public void  gameDay()
+        {
+            Console.WriteLine("Now that you got your surplies, are you ready to start your day");
+            Console.ReadLine();
+        }
 
         
 

@@ -19,8 +19,8 @@ namespace Lemonade_Stand_game
         public decimal cups100Unit = 1.75M, cups250Unit = 2.25M, cups300Unit = 3.50M;
 
         public decimal sugar10Unit = .75M, sugar30Unit = 2.00M, sugar75Unit = 6.50M;
+       
         
-
 
 
 
@@ -28,7 +28,7 @@ namespace Lemonade_Stand_game
         public void showStoreMenu(Player player)
         {
             Console.WriteLine("Welcome to the store here you can buy all the ingredients that you will need");
-            Console.WriteLine("What would you like to over purchase today?\n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice\nor exit");
+            Console.WriteLine("What would you like to over purchase \n\n[1] Paper Cups\n[2] Lemons\n[3] Sugar\n[4] Ice\n[5] exit");
 
             Console.Write("Please enter one of the store choices");
 
@@ -65,25 +65,12 @@ namespace Lemonade_Stand_game
                 buyMoreIce(player);
 
             }
-            else 
+            else if (storeChoice == "5")
             {
-                Console.WriteLine("Are you sure your ready to leave the store? \n\n\t[Y] or [N]\n");
-                string Leave = Console.ReadLine();
-                if (Leave == "Y")
-                {
-
-
-                    this.LeaveStore;
-                        {
-
-                    }
-                    
-                }
-
-
-
-
-            }
+                Game game = new Game();
+                game.gameDay();
+                                
+               }
 
         }
         public void buyMoreCups(Player player)

@@ -21,7 +21,7 @@ namespace Lemonade_Stand_game
         public Player()
 
         {
-            this.inventory = new Inventory();
+            inventory = new Inventory();
             this.purse = new purse();
         }
 

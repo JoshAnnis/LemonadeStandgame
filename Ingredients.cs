@@ -8,8 +8,7 @@ namespace Lemonade_Stand_game
 {
     class Ingredients
     {
-        public Inventory inventory;
-
+     
 
 
         public void GetIngredients()

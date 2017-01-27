@@ -34,9 +34,6 @@ namespace Lemonade_Stand_game
         public void inventoryReport()
 
         {
-
-
-
             Console.WriteLine("\nIce cubes on hand are\t\t[" + (iceList.Count) + "]" + "\nLemons on hand are\t\t[" + (lemonList.Count) + "]" + "\nPaper cups on hand are\t\t[" + (paperCupList.Count) + "]" + "\nCups of Sugar on hand are\t[" + (sugarList.Count) + "]");
             Console.ReadLine();
 

@@ -8,29 +8,25 @@ namespace Lemonade_Stand_game
 {
     class Customer
     {
+        Random random = new Random();
+        string name;
+        
 
-       Random mood;
+
+
+        public void CustomerRandomizer()
+        {
+            string[] Customers = new string[40] { "Peter", "Heriberto", "Kent", "Lee", "Olen", "Bryant", "Lucius", "Ramo", "Rigoerto", "Booker", "Matthew", "Tommie", "Steven", "Nick", "Haywood", "Zachariah", "Andreas", "Waylon", "Columbus", "Peter", "Kaylee", "Vicenta", "Mireya", "Lashawnda", "Jackelyn", "Ronna", "Nova", "Georgine", "Ashely", "Antonette", "Sunday", "Ming", "Blanca", "Lashandra", "Latrice", "Mamie", "Patti", "Debby", "Valeri", "Shirely" };
+            string firstNames = Customers[random.Next(0, 40)];
+            name = Customers + "";
+            }
 
 
 
-        public Customer ()
+        public void Mightbuy(Player player, Weather weather)
         {
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
