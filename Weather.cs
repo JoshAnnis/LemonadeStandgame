@@ -1,56 +1,121 @@
 ﻿using System;
+
 using System.Collections.Generic;
+
 using System.Linq;
+
 using System.Text;
+
 using System.Threading.Tasks;
 
-namespace Lemonade_Stand_game
+
+
+namespace LemonadeStand
+
 {
-    class Weather
+
+    public class Weather
+
     {
 
-        int temperature;
-        string cond;
-      
-        public void StartingWeather()
+        private int temperature;
+
+        private string conditions;
+
+        private List<string> clouds = new List<string> { "Sunny", "Overcast", "Rainy" };
+
+
+
+
+
+        public Weather()
+
         {
-            TemperatureGenerator();
-            CondGenerator();
-            Console.WriteLine("The Weather forcast for today is " + temperature +  " degress " + cond+ "");
-            Console.ReadLine();
+
         }
 
 
-        public int TemperatureGenerator()
+
+        public void SetWeather()
+
         {
-            Random random = new Random();
-            temperature = random.Next(40, 110);
+
+            int temperatureMin = 30;
+
+            int temperatureMax = 100;
+
+
+
+            Random random = new Random(DateTime.Now.Millisecond);
+
+
+
+            temperature = random.Next(temperatureMin, temperatureMax);
+
+
+
+            Random index = new Random(DateTime.Now.Millisecond);
+
+
+
+            conditions = clouds[index.Next(0, clouds.Count())];
+
+        }
+
+
+
+        public void SetWeather(Weather weatherForecast)
+
+        {
+
+            int weatherVariance = 5;
+
+
+
+            Random random = new Random(DateTime.Now.Millisecond);
+
+            temperature = random.Next(weatherForecast.temperature - weatherVariance, weatherForecast.temperature + weatherVariance);
+
+            Random index = new Random(DateTime.Now.Millisecond);
+
+            conditions = clouds[index.Next(0, clouds.Count())];
+
+        }
+
+
+
+        public void DisplayWeather(Weather weather)
+
+        {
+
+            Console.WriteLine("The weather forecast is {1} and {2}", weather.temperature, weather.conditions);
+
+        }
+
+
+
+        public int GetWeatherTemperature()
+
+        {
+
             return temperature;
+
         }
 
-        public void CondGenerator()
+
+
+        public string GetWeatherConditions()
+
         {
-            int randomCond;
-            Random random = new Random();
-            randomCond = random.Next(1, 5);
-            if (randomCond == 1)
-            {
-                cond = "Clear and Sunny";
-            }
-            else if (randomCond==2)
-            {
-                cond = "overcast";
-            }
-            else if (randomCond == 3)
-            {
-                cond = "raniny";
-            }
-            else if (randomCond == 4)
-            {
-                cond = "Partly cloudly";
-            }
 
+            return conditions;
 
         }
+
     }
+
+
+
+
+
 }

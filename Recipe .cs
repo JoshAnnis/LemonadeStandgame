@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_game
 {
-    class Ingredients
+    class Recipe 
     {
      
 
 
-        public void GetIngredients()
+        public void recipe()
         {
 
         }

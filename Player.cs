@@ -14,7 +14,7 @@ namespace Lemonade_Stand_game
 
         public purse purse;
 
-      
+
 
 
 
@@ -25,6 +25,15 @@ namespace Lemonade_Stand_game
             this.purse = new purse();
         }
 
-       
+        public string GetName()
+
+        {
+            Console.WriteLine("What is your name?");
+
+            string playerName = Console.ReadLine();
+
+            Console.WriteLine("Welcome {0}.", playerName);
+            return playerName;
+        }
     }
 }

@@ -11,12 +11,12 @@ namespace Lemonade_Stand_game
         Inventory inventory = new Inventory();
         Player player = new Player();
         Store store = new Store();
-        int dayNumber = 1;
         Day day = new Day();
         Weather weather = new Weather();
         UserInterface ui = new UserInterface();
+        customer customer = new customer();
        
-
+        
 
         public void StartGame()
         {
@@ -46,7 +46,7 @@ namespace Lemonade_Stand_game
 
             {
 
-               // day.setSellingPriceForDay();
+                day.setSellingPriceForDay();
 
             }
 
@@ -57,6 +57,7 @@ namespace Lemonade_Stand_game
         {
             Console.WriteLine("Now that you got your surplies, are you ready to start your day");
             Console.ReadLine();
+            day.setSellingPriceForDay();
         }
 
         
