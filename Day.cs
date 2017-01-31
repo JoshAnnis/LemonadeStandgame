@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lemonade_Stand_game;
+using System;
 
 using System.Collections.Generic;
 
@@ -17,6 +18,8 @@ namespace Lemonade_Stand_game
     class Day
 
     {
+        Weather weather = new Weather();
+        
     }
 }
 

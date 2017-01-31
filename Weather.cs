@@ -10,93 +10,47 @@ using System.Threading.Tasks;
 
 
 
-namespace LemonadeStand
+namespace Lemonade_Stand_game
 
 {
 
-    public class Weather
+   public  class Weather
 
     {
 
-        private int temperature;
-
-        private string conditions;
-
-        private List<string> clouds = new List<string> { "Sunny", "Overcast", "Rainy" };
 
 
+        int temperature;
+
+        string cond;
 
 
 
-        public Weather()
+        public void StartingWeather()
 
         {
+
+            TemperatureGenerator();
+
+            CondGenerator();
+
+            Console.WriteLine("The Weather forcast for today is " + temperature + " degress " + cond + "");
+
+            Console.ReadLine();
 
         }
 
 
 
-        public void SetWeather()
+
+
+        public int TemperatureGenerator()
 
         {
 
-            int temperatureMin = 30;
+            Random random = new Random();
 
-            int temperatureMax = 100;
-
-
-
-            Random random = new Random(DateTime.Now.Millisecond);
-
-
-
-            temperature = random.Next(temperatureMin, temperatureMax);
-
-
-
-            Random index = new Random(DateTime.Now.Millisecond);
-
-
-
-            conditions = clouds[index.Next(0, clouds.Count())];
-
-        }
-
-
-
-        public void SetWeather(Weather weatherForecast)
-
-        {
-
-            int weatherVariance = 5;
-
-
-
-            Random random = new Random(DateTime.Now.Millisecond);
-
-            temperature = random.Next(weatherForecast.temperature - weatherVariance, weatherForecast.temperature + weatherVariance);
-
-            Random index = new Random(DateTime.Now.Millisecond);
-
-            conditions = clouds[index.Next(0, clouds.Count())];
-
-        }
-
-
-
-        public void DisplayWeather(Weather weather)
-
-        {
-
-            Console.WriteLine("The weather forecast is {1} and {2}", weather.temperature, weather.conditions);
-
-        }
-
-
-
-        public int GetWeatherTemperature()
-
-        {
+            temperature = random.Next(40, 101);
 
             return temperature;
 
@@ -104,18 +58,54 @@ namespace LemonadeStand
 
 
 
-        public string GetWeatherConditions()
+        public void CondGenerator()
 
         {
 
-            return conditions;
+            int randomCond;
+
+            Random random = new Random();
+
+            randomCond = random.Next(1, 5);
+
+            if (randomCond == 1)
+
+            {
+
+                cond = "Clear and Sunny";
+
+            }
+
+            else if (randomCond == 2)
+
+            {
+
+                cond = "overcast";
+
+            }
+
+            else if (randomCond == 3)
+
+            {
+
+                cond = "raniny";
+
+            }
+
+            else if (randomCond == 4)
+
+            {
+
+                cond = "Partly cloudly";
+
+            }
+
+
+
+
 
         }
 
     }
-
-
-
-
 
 }
