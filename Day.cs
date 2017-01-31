@@ -18,8 +18,43 @@ namespace Lemonade_Stand_game
     class Day
 
     {
-        Weather weather = new Weather();
         
+        public Weather weatherForecast;
+
+        public Weather weatherActual;
+
+        public List<Customer> customers;
+
+        public double demandLevel;
+
+        public Recipe recipe;
+
+        
+
+
+
+
+
+        private int numOfCustomers;
+
+        private int numOfBuyingCustomers;
+
+        private double pricePerCup;
+
+        private double dailyRevenue;
+
+        private double dailyExpenses;
+
+        private bool soldOut;
+
+        private int numOfPitchers;
+
+
+
+
+
+
+
     }
 }
 
