@@ -99,7 +99,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.paperCupList.Add(new paperCups());
+                    player.inventory.paperCupList.Add(new PaperCups());
 
                 }
 
@@ -115,7 +115,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.paperCupList.Add(new paperCups());
+                    player.inventory.paperCupList.Add(new PaperCups());
 
                 }
 
@@ -131,7 +131,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.paperCupList.Add(new paperCups());
+                    player.inventory.paperCupList.Add(new PaperCups());
 
                 }
 
@@ -169,7 +169,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.lemonList.Add(new lemons());
+                    player.inventory.lemonList.Add(new Lemons());
 
                 }
 
@@ -185,7 +185,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.lemonList.Add(new lemons());
+                    player.inventory.lemonList.Add(new Lemons());
 
                 }
 
@@ -201,7 +201,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.lemonList.Add(new lemons());
+                    player.inventory.lemonList.Add(new Lemons());
 
                 }
 
@@ -237,7 +237,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.sugarList.Add(new sugar());
+                    player.inventory.sugarList.Add(new Sugar());
 
                 }
 
@@ -253,7 +253,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.sugarList.Add(new sugar());
+                    player.inventory.sugarList.Add(new Sugar());
 
                 }
 
@@ -269,7 +269,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.sugarList.Add(new sugar());
+                    player.inventory.sugarList.Add(new Sugar());
 
                 }
 
@@ -305,7 +305,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.iceList.Add(new ice());
+                    player.inventory.iceList.Add(new Ice());
 
                     player.purse.purseBalance -= singleIceCube;
 
@@ -321,7 +321,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.iceList.Add(new ice());
+                    player.inventory.iceList.Add(new Ice());
 
                     player.purse.purseBalance -= (singleIceCube * .8M);
 
@@ -337,7 +337,7 @@ namespace Lemonade_Stand_game
 
                 {
 
-                    player.inventory.iceList.Add(new ice());
+                    player.inventory.iceList.Add(new Ice());
 
                     player.purse.purseBalance -= (singleIceCube * .8M);
 

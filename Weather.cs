@@ -20,9 +20,9 @@ namespace Lemonade_Stand_game
 
 
 
-        int temperature;
+      public  int temperature;
 
-        string cond;
+        public string condition;
 
 
 
@@ -32,9 +32,9 @@ namespace Lemonade_Stand_game
 
             TemperatureGenerator();
 
-            CondGenerator();
+            ConditionGenerator();
 
-            Console.WriteLine("The Weather forcast for today is " + temperature + " degress " + cond + "");
+            Console.WriteLine("The Weather forcast for today is " + temperature + " degress " + condition + "");
 
             Console.ReadLine();
 
@@ -58,45 +58,45 @@ namespace Lemonade_Stand_game
 
 
 
-        public void CondGenerator()
+        public void ConditionGenerator()
 
         {
 
-            int randomCond;
+            int randomCondition;
 
             Random random = new Random();
 
-            randomCond = random.Next(1, 5);
+            randomCondition = random.Next(1, 5);
 
-            if (randomCond == 1)
+            if (randomCondition == 1)
 
             {
 
-                cond = "Clear and Sunny";
+                condition = "Clear and Sunny";
 
             }
 
-            else if (randomCond == 2)
+            else if (randomCondition == 2)
 
             {
 
-                cond = "overcast";
+                condition = "Stormy";
 
             }
 
-            else if (randomCond == 3)
+            else if (randomCondition == 3)
 
             {
 
-                cond = "raniny";
+                condition = "Rainy";
 
             }
 
-            else if (randomCond == 4)
+            else if (randomCondition == 4)
 
             {
 
-                cond = "Partly cloudly";
+                condition = "Partly cloudly";
 
             }
 

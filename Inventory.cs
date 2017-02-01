@@ -10,24 +10,24 @@ namespace Lemonade_Stand_game
 
     {
 
-        public List<ice> iceList;
+        public List<Ice> iceList;
 
-        public List<lemons> lemonList;
+        public List<Lemons> lemonList;
 
-        public List<paperCups> paperCupList;
+        public List<PaperCups> paperCupList;
 
-        public List<sugar> sugarList;
+        public List<Sugar> sugarList;
 
         public  Inventory()
 
         {
-            iceList = new List<ice>();
+            iceList = new List<Ice>();
 
-            lemonList = new List<lemons>();
+            lemonList = new List<Lemons>();
 
-            paperCupList = new List<paperCups>();
+            paperCupList = new List<PaperCups>();
 
-            sugarList = new List<sugar>();
+            sugarList = new List<Sugar>();
 
         }
 

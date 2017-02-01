@@ -1,42 +1,86 @@
 ﻿using System;
 
+
+
 using System.Collections.Generic;
+
+
 
 using System.Linq;
 
+
+
 using System.Text;
+
+
 
 using System.Threading.Tasks;
 
 
 
+
+
+
+
 namespace Lemonade_Stand_game
+
+
 
 {
 
-    class customer
+
+
+          public class Customer
+
+
 
     {
 
-        Weather weather = new Weather();
+
+
+     
 
 
 
-        public List<customer> customerlist;
+
+
+
+        public List<Customer> customerlist;
 
 
 
 
 
-        public customer()
+
+
+
+
+
+
+        public Customer()
+
+
 
         {
 
-            customerlist = new List<customer>();
 
-            customer customer = new customer();
+            
+
+
+
+          
+
+
 
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -46,7 +90,15 @@ namespace Lemonade_Stand_game
 
         public void Mightbuy(Player player, Weather weather)
 
+
+
         {
+
+
+
+
+
+
 
 
 
@@ -60,34 +112,5 @@ namespace Lemonade_Stand_game
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

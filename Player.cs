@@ -12,7 +12,7 @@ namespace Lemonade_Stand_game
 
         public Inventory inventory;
 
-        public purse purse;
+        public Purse purse;
 
 
 
@@ -22,7 +22,7 @@ namespace Lemonade_Stand_game
 
         {
             inventory = new Inventory();
-            this.purse = new purse();
+            this.purse = new Purse();
         }
 
         public string GetName()

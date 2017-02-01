@@ -1,8 +1,8 @@
 ﻿namespace Lemonade_Stand_game
 {
-    public class sugar
+    public class Sugar
     {
-        public sugar ()
+        public Sugar ()
         {
 
         }

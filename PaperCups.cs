@@ -1,8 +1,8 @@
 ﻿namespace Lemonade_Stand_game
 {
-    public class paperCups
+    public class PaperCups
     {
-         public paperCups()
+         public PaperCups()
         {
 
         }

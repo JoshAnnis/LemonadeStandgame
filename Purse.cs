@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_game
 {
-    public class purse
+    public class Purse
     {
        public decimal purseBalance = 20.00M;
        

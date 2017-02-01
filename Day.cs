@@ -15,49 +15,35 @@ namespace Lemonade_Stand_game
 
 {
 
-    class Day
-
+    public class Day
     {
-        
-        public Weather weatherForecast;
 
-        public Weather weatherActual;
-
-        public List<Customer> customers;
-
-        public double demandLevel;
-
-        public Recipe recipe;
-
-        
+        Customer customer = new Customer();
 
 
+        List<string> dayOfTheWeek = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
+        public Day()
 
+        {
 
-        private int numOfCustomers;
+        }
 
-        private int numOfBuyingCustomers;
+        public void ChooseDays(Weather weather, Game game, Purse purse, Store store, Inventory inventory, Customer customer, Day day)
 
-        private double pricePerCup;
+        {
 
-        private double dailyRevenue;
+            foreach (var dayOfTheWeek in dayOfTheWeek)
 
-        private double dailyExpenses;
+            {
 
-        private bool soldOut;
-
-        private int numOfPitchers;
+                Console.WriteLine("Today is {0}", dayOfTheWeek);
 
 
 
+            }
 
-
-
+        }
 
     }
 }
-
-        
-
-       

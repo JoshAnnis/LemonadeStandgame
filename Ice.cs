@@ -1,8 +1,8 @@
 ﻿namespace Lemonade_Stand_game
 {
-    public class ice
+    public class Ice
     {
-        public ice()
+        public Ice()
         {
 
         }

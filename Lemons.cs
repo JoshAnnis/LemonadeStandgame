@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_game
 {
-   public class lemons
+   public class Lemons
     {
-        public lemons()
+        public Lemons()
         {
 
         }
