@@ -81,8 +81,8 @@
              } 
              else if (storeChoice == "5") 
              { 
-                 Game game = new Game(); 
-                 game.gameDay(); 
+                  
+               
                                   
                 } 
  

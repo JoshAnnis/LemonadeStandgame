@@ -17,7 +17,6 @@ namespace Lemonade_Stand_game
         Player player;
         Store store;
         Day day;
-        Weather weather;
         UserInterface ui;
         public Game()
         {
@@ -25,7 +24,6 @@ namespace Lemonade_Stand_game
             player = new Player();
             store = new Store();
             day = new Day();
-            weather = new Weather();
             ui = new UserInterface();
             
         }
@@ -34,10 +32,15 @@ namespace Lemonade_Stand_game
         {
 
             ui.title();
-            weather.StartingWeather();
+           
             inventory.inventoryReport();
             RestockOpition(store);
+
+            
+
             Console.ReadLine();
+
+
         }
         public void RestockOpition(Store store)
 
@@ -51,7 +54,8 @@ namespace Lemonade_Stand_game
             {
                 Console.Clear();
 
-                store.showStoreMenu(this.player);
+                store.showStoreMenu(player);
+                gameDay();
             }
             else
             {
@@ -66,7 +70,7 @@ namespace Lemonade_Stand_game
         {
 
 
-            Console.WriteLine("Now that you got your surplies, are you ready to start your day");
+            
             day.setSellingPriceForDay();
 
 

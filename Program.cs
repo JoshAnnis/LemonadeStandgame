@@ -25,7 +25,6 @@ namespace Lemonade_Stand_game
             Game game = new Game();
 
             game.StartGame();
-
         }
 
     }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 
 
@@ -14,33 +15,27 @@ namespace Lemonade_Stand_game
 
     public class Day
     {
+        Weather weather = new Weather();
         List<Customer> customers = new List<Customer> { };
-        List<string> day = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-        public decimal SetPrice = 0;
-        public Day()
+        List<string> daylist = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+      
 
+        public decimal SetPrice = 0.25M ;
+        
 
+        public void ChoseDay()
         {
-
-
-        }
-
-
-        public void ChooseDays(Weather weather, Game game, Purse purse, Store store, Inventory inventory, Customer customer, Day day)
-        {
-            foreach (var dayOfTheWeek in this.day)
-
-            {
-
-                Console.WriteLine("Today is {0}", dayOfTheWeek);
-            }
+            weather.StartingWeather();
+            setSellingPriceForDay();
 
         }
         public void setSellingPriceForDay()
         {
-            Console.WriteLine("Your price for each cup of lemonade is $[0.25]:Do you want to keep it or [change] it?");
+            Console.Clear();
+            weather.StartingWeather();
+            Console.WriteLine("Your price for each cup of lemonade is $[0.25]: Would you like to change it [Y] or [N]");
             string changeprice = Console.ReadLine();
-            if (changeprice == "change")
+            if (changeprice.ToUpper() == "Y")
             {
                 Console.Write("\nEnter the price you want to charge per cup for today.\n");
                 decimal newPriceForToday = Convert.ToDecimal(Console.ReadLine());
@@ -57,6 +52,6 @@ namespace Lemonade_Stand_game
 
 
 
-        }
+    }
   }
 }
