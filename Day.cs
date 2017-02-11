@@ -17,17 +17,16 @@ namespace Lemonade_Stand_game
     {
         Weather weather = new Weather();
         List<Customer> customers = new List<Customer> { };
-        List<string> daylist = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-      
-
         public decimal SetPrice = 0.25M ;
         
 
-        public void ChoseDay()
-        {
-            weather.StartingWeather();
-            setSellingPriceForDay();
 
+
+
+
+       
+        public void startDay()
+        {
         }
         public void setSellingPriceForDay()
         {
@@ -46,12 +45,35 @@ namespace Lemonade_Stand_game
 
             else
             {
-                Console.WriteLine("Alright lets play");
+                getCustomers();
+                
             }
+          }
+
+        public void getCustomers()
+        {
+            for (int i = 0; i < weather.temperature; i++)
+
+            {
+
+                Customer customer = new Customer();
+
+                customers.Add(customer);
+
+            }
+        }
+
+
+        public void sellLemonade()
+        {
+            
+        }
 
 
 
+       
+
+       
 
     }
-  }
 }

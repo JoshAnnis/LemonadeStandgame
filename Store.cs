@@ -35,56 +35,65 @@
  
  
              Console.Write("Please enter one of the store choices"); 
-             string storeChoice = Console.ReadLine(); 
- 
-             if (storeChoice == "1") 
- 
- 
-             { 
+             string storeChoice = Console.ReadLine();
 
- 
-                 buyMoreCups(player); 
- 
- 
-             } 
- 
-             else if (storeChoice == "2") 
- 
- 
-             { 
- 
- 
-                 buyMoreLemons(player); 
- 
- 
-             } 
- 
- 
-             else if (storeChoice == "3")  
- 
-             { 
- 
- 
-                 buyMoreSugar(player); 
- 
- 
-             } 
- 
- 
-             else if (storeChoice == "4") 
-             { 
- 
- 
-                 buyMoreIce(player); 
- 
- 
-             } 
-             else if (storeChoice == "5") 
-             { 
-                  
-               
-                                  
-                } 
+            if (storeChoice == "1")
+
+
+            {
+
+
+                buyMoreCups(player);
+
+
+            }
+
+            else if (storeChoice == "2")
+
+
+            {
+
+
+                buyMoreLemons(player);
+
+
+            }
+
+
+            else if (storeChoice == "3")
+
+            {
+
+
+                buyMoreSugar(player);
+
+
+            }
+
+
+            else if (storeChoice == "4")
+            {
+
+
+                buyMoreIce(player);
+
+
+            }
+            else if (storeChoice == "5")
+            {
+
+
+
+            }
+            else
+            {
+                Console.WriteLine("Plase choose on of the options");
+                Console.ReadLine();
+                showStoreMenu(player);
+
+
+            }
+
  
  
          } 
@@ -180,103 +189,40 @@
          } 
  
          public void buyMoreLemons(Player player)
- 
- 
         { 
-
- 
-             Console.Clear(); 
- 
- 
- 
- 
- 
- 
-             Console.WriteLine("\nSelect a quantity for your order.\n\n [1] \t10 Lemons for $.75 \n [2] \t25 Lemons for $1.75 \n [3] \t75 Lemons for $2.75\n"); 
- 
- 
-             Console.Write("Your choice "); 
- 
- 
-             string usersChoice = Console.ReadLine(); 
- 
- 
-             if (usersChoice == "1") 
- 
- 
-            { 
- 
- 
-                 for (int lemons = 0; lemons< 10; lemons++) 
- 
- 
-                 { 
- 
- 
-                     player.inventory.lemonList.Add(new Lemons()); 
- 
- 
-                 } 
- 
- 
+             Console.Clear();  
+             Console.WriteLine("\nSelect a quantity for your order.\n\n [1] \t10 Lemons for $.75 \n [2] \t25 Lemons for $1.75 \n [3] \t75 Lemons for $2.75\n");  
+             Console.Write("Your choice ");  
+             string usersChoice = Console.ReadLine();  
+             if (usersChoice == "1")  
+            {  
+                 for (int lemons = 0; lemons< 10; lemons++)  
+                 {  
+                     player.inventory.lemonList.Add(new Lemons());  
+                 }  
                  player.purse.purseBalance -= lemons10Units; 
-
- 
              } 
  
-            else if (usersChoice == "2") 
- 
-
-             { 
- 
- 
+            else if (usersChoice == "2")
+            { 
                  for (int lemons = 0; lemons< 25; lemons++) 
- 
- 
                  { 
- 
-
                      player.inventory.lemonList.Add(new Lemons()); 
- 
- 
-                 } 
- 
- 
+                 }  
                  player.purse.purseBalance -= lemons25Units; 
  
- 
-             } 
- 
- 
+             }  
              else if (usersChoice == "3") 
- 
- 
              { 
- 
- 
                  for (int lemons = 0; lemons< 75; lemons++) 
- 
- 
                  { 
- 
- 
-                     player.inventory.lemonList.Add(new Lemons()); 
- 
- 
+                      player.inventory.lemonList.Add(new Lemons()); 
                  } 
- 
- 
-                 player.purse.purseBalance -= lemons75Units; 
- 
- 
+                 player.purse.purseBalance -= lemons75Units;  
              } 
              player.inventory.inventoryReport(); 
              Console.WriteLine("\n\nThis is your new cashbox balance $ " + (player.purse.purseBalance)); 
              showStoreMenu(player); 
- 
- 
- 
- 
          } 
          public void buyMoreSugar(Player player)
  
