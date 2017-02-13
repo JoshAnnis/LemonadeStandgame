@@ -14,7 +14,7 @@ namespace Lemonade_Stand_game
 		{ 
             TemperatureGenerator(); 
             ConditionGenerator(); 
-            Console.WriteLine("The Weather forecast for today is " + temperature + " degress " + condition + ""); 
+            Console.WriteLine("The Weather forecast for today is " + temperature + " degress and " + condition + ""); 
              Console.ReadLine(); 
        } 
        public int TemperatureGenerator() 
