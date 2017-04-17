@@ -80,10 +80,10 @@ namespace Lemonade_Stand_game
             if (customer.isThirsty == true)
             {
                
-                player.inventory.paperCupList.RemoveRange(1, 10);
-                player.inventory.iceList.RemoveRange(1, 10);
-                player.inventory.lemonList.RemoveRange(1, 9);
-                player.inventory.sugarList.RemoveRange(1, 9);
+                player.inventory.paperCupList.RemoveRange(1, 20);
+                player.inventory.iceList.RemoveRange(1, 20);
+                player.inventory.lemonList.RemoveRange(1, 11);
+                player.inventory.sugarList.RemoveRange(1, 11);
                 player.purse.purseBalance += cashMoney;
             }
         }

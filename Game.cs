@@ -46,9 +46,8 @@ namespace Lemonade_Stand_game
                 player.inventory.inventoryReport();
                 RestockOpition(store);
                 Console.Clear();
-
             }
-
+            endGame();
         }
         public void RestockOpition(Store store)
         {
@@ -78,5 +77,9 @@ namespace Lemonade_Stand_game
             Console.ReadLine();
         }
 
+        public void endGame()
+        {
+            Console.WriteLine("So how was your time running your stand?\n you ready to start your empire yet?");
+        }
     }
 }
