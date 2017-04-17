@@ -1,0 +1,6 @@
+OOP Solid principle
+
+Single Responsibility 
+My Condition Generator function does one thing and one thing well.
+Open closed principle:
+My Restock Option is open to extension but closed for modification.
