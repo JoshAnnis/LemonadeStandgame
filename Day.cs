@@ -20,7 +20,7 @@ namespace Lemonade_Stand_game
         public decimal SetPrice = 0.25M;
         public double dayProfit;
         Customer customer = new Customer();
-        public int CashMoney = 20;
+        private int cashMoney = 15;
 
 
 
@@ -84,7 +84,7 @@ namespace Lemonade_Stand_game
                 player.inventory.iceList.RemoveRange(1, 10);
                 player.inventory.lemonList.RemoveRange(1, 9);
                 player.inventory.sugarList.RemoveRange(1, 9);
-                player.purse.purseBalance += CashMoney;
+                player.purse.purseBalance += cashMoney;
             }
         }
 

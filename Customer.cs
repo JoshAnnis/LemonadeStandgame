@@ -10,7 +10,7 @@ namespace Lemonade_Stand_game
     {
          public bool isThirsty;
         double willingnessToPay;
-        
+        public int CashMoney = 20;
             public Customer()
             {
             Random random = new Random();
@@ -50,6 +50,7 @@ namespace Lemonade_Stand_game
             }
             return isThirsty;
         }
+
         
 
     }
