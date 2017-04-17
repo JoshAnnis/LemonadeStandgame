@@ -11,7 +11,8 @@ namespace Lemonade_Stand_game
     {
 
 
-        Player player = new Player();
+        //Player player = new Player();
+        
         public UserInterface()
         {
 
@@ -20,7 +21,7 @@ namespace Lemonade_Stand_game
         public void title()
         {
             Console.WriteLine("Welcome to Lemonade Stand\n");
-            player.GetName();
+            
 
 
             Console.WriteLine("\nDo you have what it takes to start you lemonade stand empire?\n");

@@ -8,100 +8,21 @@ namespace Lemonade_Stand_game
 {
     class Recipe
     {
-
-
-
-       
-         public int numOfLemons;
-
-        public int numOfSugar;
-
-        public int numOfIce;
-
-        public int maxNumOfCups;
-
-        public int maxNumOfPitchers;
-
-        public int cupsPerPitcher;
-
-    
+        public double lemon, sugar, ice, cup;
 
         public Recipe()
 
         {
 
-            numOfLemons = 0;
+            lemon = .2;
 
-            numOfSugar = 0;
+            sugar = .3;
 
-            numOfIce = 0;
+            ice = 6;
 
-            maxNumOfCups = 0;
-
-            maxNumOfPitchers = 0;
-
-            cupsPerPitcher = 10;
-
-        }
-        public int GetNumberOfLemons()
-
-        {
-
-            return numOfLemons;
-
-        }
-
-
-
-        public int GetNumberOfSugar()
-
-        {
-
-            return numOfSugar;
-
-        }
-
-
-
-        public int GetNumberOfIce()
-
-        {
-
-            return numOfIce;
-
-        }
-
-
-
-        public int GetMaxNumberOfCups()
-
-        {
-
-            return maxNumOfCups;
-
-        }
-
-
-
-        public int GetMaxNumberOfPitchers()
-
-        {
-
-            return maxNumOfPitchers;
-
-        }
-
-
-
-        public int GetCupsPerPitcher()
-
-        {
-
-            return cupsPerPitcher;
+            cup = 1;
 
         }
 
     }
-
 }
-        

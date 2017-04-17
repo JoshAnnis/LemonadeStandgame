@@ -18,7 +18,7 @@ namespace Lemonade_Stand_game
         Store store;
         Day day;
         UserInterface ui;
-        private int numberOfDays;
+        private int numberOfDays = 7;
 
         public Game()
         {
@@ -27,7 +27,7 @@ namespace Lemonade_Stand_game
             store = new Store();
             day = new Day();
             ui = new UserInterface();
-              numberOfDays = 7;
+           
         }
         
         public void StartGame()
@@ -36,14 +36,18 @@ namespace Lemonade_Stand_game
             ui.title();
             inventory.inventoryReport();
             RestockOpition(store);
-            Console.WriteLine("Press enter to see how your day went");
-            Console.ReadLine();
+            Console.Clear();
             for (int i = 1; i < numberOfDays; i++)
-            {
-                store.showStoreMenu(player);
-                Console.Clear();
-            }
 
+            {
+                Console.WriteLine("Press enter to see how your day went");
+                Console.ReadKey();
+                day.DailyReoprt(player);
+                player.inventory.inventoryReport();
+                RestockOpition(store);
+                Console.Clear();
+
+            }
 
         }
         public void RestockOpition(Store store)
@@ -59,8 +63,8 @@ namespace Lemonade_Stand_game
             }
             else
             {
-                 day.setSellingPriceForDay();
-                day.sellLemonade();
+                day.setSellingPriceForDay();
+                day.sellLemonade(player);
 
             }
 
@@ -70,6 +74,7 @@ namespace Lemonade_Stand_game
 
         {
             day.setSellingPriceForDay();
+            day.sellLemonade(player);
             Console.ReadLine();
         }
 

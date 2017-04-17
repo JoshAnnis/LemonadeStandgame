@@ -11,7 +11,8 @@ namespace Lemonade_Stand_game
  
          public string condition; 
          public void StartingWeather() 
-		{ 
+		{
+           
             TemperatureGenerator(); 
             ConditionGenerator(); 
             Console.WriteLine("The Weather forecast for today is " + temperature + " degress and " + condition + ""); 
@@ -20,7 +21,7 @@ namespace Lemonade_Stand_game
        public int TemperatureGenerator() 
 	   { 
             Random random = new Random(); 
-            temperature = random.Next(40, 101);
+            temperature = random.Next(60, 101);
             return temperature; 
        } 
 
@@ -31,7 +32,7 @@ namespace Lemonade_Stand_game
  
             Random random = new Random(); 
  
-            randomCondition = random.Next(1, 5); 
+            randomCondition = random.Next(1, 6); 
            if (randomCondition == 1) 
        { 
                condition = "Clear and Sunny"; 
@@ -63,6 +64,10 @@ namespace Lemonade_Stand_game
  
                  condition = "Partly cloudly"; 
  
+            }
+            else if (randomCondition == 5)
+            {
+                condition = "Fogy";
             }
         }
     }

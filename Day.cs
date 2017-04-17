@@ -17,17 +17,13 @@ namespace Lemonade_Stand_game
     {
         Weather weather = new Weather();
         List<Customer> customers = new List<Customer> { };
-        public decimal SetPrice = 0.25M ;
-        
+        public decimal SetPrice = 0.25M;
+        public double dayProfit;
+        Customer customer = new Customer();
+        public int CashMoney = 20;
 
 
 
-
-
-       
-        public void startDay()
-        {
-        }
         public void setSellingPriceForDay()
         {
             Console.Clear();
@@ -40,15 +36,16 @@ namespace Lemonade_Stand_game
                 decimal newPriceForToday = Convert.ToDecimal(Console.ReadLine());
                 Console.WriteLine("\nTodays price is ( $ " + (newPriceForToday) + " )");
                 SetPrice = newPriceForToday;
+                getCustomers();
             }
 
 
             else
             {
                 getCustomers();
-                
+
             }
-          }
+        }
 
         public void getCustomers()
         {
@@ -56,24 +53,47 @@ namespace Lemonade_Stand_game
 
             {
 
-                Customer customer = new Customer();
+
 
                 customers.Add(customer);
 
+
+            }
+
+        }
+
+
+      
+
+        public void DailyReoprt(Player player)
+        {
+
+            Console.WriteLine("You have {0}$", player.purse.purseBalance);
+            Console.ReadLine();
+
+        }
+
+
+        public void sellLemonade(Player player)
+        {
+            customer.Mightbuy(weather);
+            if (customer.isThirsty == true)
+            {
+               
+                player.inventory.paperCupList.RemoveRange(1, 10);
+                player.inventory.iceList.RemoveRange(1, 10);
+                player.inventory.lemonList.RemoveRange(1, 9);
+                player.inventory.sugarList.RemoveRange(1, 9);
+                player.purse.purseBalance += CashMoney;
             }
         }
 
-
-        public void sellLemonade()
-        {
-            
-        }
-
-
-
        
 
-       
+        
+
+
+
 
     }
 }
